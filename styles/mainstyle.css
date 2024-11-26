@@ -1,0 +1,115 @@
+/* Global Reset */ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  background-color: #F7F7F7;
+}
+
+/* Star section with transition effects starts here */
+.grid-container {
+  display: grid;
+  padding: 5px;
+  gap: 30px;
+  margin: 50px auto;
+  max-width: 1200px;
+  width: 90%;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wp-block-zolo-advanced-icon-box {
+  padding: 20px;
+  text-align: center;
+  background-color: #FBFDFF;
+  border: 1px solid #EAECEE;
+  border-radius: 5px;
+  overflow: hidden;
+  max-height: 220px;
+  transition: transform 0.2s ease;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+}
+
+.wp-block-zolo-advanced-icon-box:hover {
+  transform: translateY(-5px);
+}
+
+.zolo-block-item {
+  position: relative;
+  transform: translateY(40%);
+  transition: transform 0.6s ease;
+  bottom: 40px;
+}
+
+.zolo-block-title {
+  margin-top: 20px;
+  color: #232323;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 600;
+  transition: transform 0.6s ease;
+}
+
+/* Hover effect */
+.wp-block-zolo-advanced-icon-box:hover .zolo-block-item {
+  transform: translateY(9%);
+}
+
+.wp-block-zolo-advanced-icon-box:hover .svg-icon {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.svg-icon {
+  width: 40px;
+  fill: rgb(63, 142, 252);
+  transition: opacity 0.6s ease;
+}
+
+.zolo-box-button {
+  color: #828282;
+  display: block;
+  padding: 6px 10px;
+  margin-bottom: 8px;
+  transition: color 0.6s ease;
+}
+
+.zolo-block-desc {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(76%);
+  color: #828282;
+  width: 64%;
+  margin: 0 auto;
+  line-height: 25px;
+}
+
+.wp-block-zolo-advanced-icon-box:hover .zolo-block-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 85%;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    width: 80%;
+    gap: 15px;
+  }
+}
+
+/* Star section with transition effects ends here */
+
+
